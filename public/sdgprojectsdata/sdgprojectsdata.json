@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "projectname": "COPS Hub",
+    "description": "Centralized platform for all COPS activities, registrations, and resources. Features a real-time event dashboard and member directory.",
+    "developer": "Yashashwi Singh",
+    "githublink": "https://github.com/cops-sdg/cops-hub",
+    "deployedlink": "https://hub.copsiitbhu.co.in",
+    "status": "OK",
+    "featured": true,
+    "image": "/sdgprojectsdata/pics/samplep1.png",
+    "stack": ["React", "Next.js", "Tailwind", "PostgreSQL"]
+  },
+  {
+    "id": 2,
+    "projectname": "SDG Vertical Website",
+    "description": "Terminal-themed website for the Software Development Group showcasing projects, members, and resources in an interactive CLI aesthetic.",
+    "developer": "Swarit Agarwal",
+    "githublink": "https://github.com/cops-sdg/sdg-vertical",
+    "deployedlink": "https://sdg.copsiitbhu.co.in",
+    "status": "IN_PROGRESS",
+    "featured": true,
+    "image": "/sdgprojectsdata/pics/samplep2.png",
+    "stack": ["Next.js", "Framer Motion", "WebGL", "Three.js"]
+  },
+  {
+    "id": 3,
+    "projectname": "Campus Connect",
+    "description": "A cross-platform mobile application aimed at streamlining campus communications and student networking.",
+    "developer": "Suryansh Garg",
+    "githublink": "https://github.com/cops-sdg/campus-connect",
+    "deployedlink": "",
+    "status": "PLANNED",
+    "featured": true,
+    "image": "/sdgprojectsdata/pics/samplep3.png",
+    "stack": ["Flutter", "Firebase", "Node.js"]
+  },
+  {
+    "id": 4,
+    "projectname": "CodeJudge CLI",
+    "description": "Command-line tool for automated testing and judging of competitive programming solutions locally before submission.",
+    "developer": "Sagnik Mandal",
+    "githublink": "https://github.com/cops-sdg/codejudge-cli",
+    "deployedlink": "https://npmjs.com/package/codejudge-cli",
+    "status": "OK",
+    "featured": true,
+    "image": "/sdgprojectsdata/pics/codejudge.png",
+    "stack": ["Go", "Docker", "Shell"]
+  }
+]

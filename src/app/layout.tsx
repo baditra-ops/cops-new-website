@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import localFont from 'next/font/local';
 import './globals.css';
 import MainLayout from '@/components/layout/MainLayout';
-import Dither from '@/components/Dither';
+import GlobalBackground from '@/components/layout/GlobalBackground';
 import { GoogleAnalytics } from '@next/third-parties/google'
 
 const agencyFBBold = localFont({
@@ -53,20 +53,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${agencyFBBold.variable} antialiased`}
       >
         <GoogleAnalytics gaId='G-YNJ7TXFBM1' />
-        {/* Global Dither Background */}
-        <div className='fixed inset-0 z-[-1]'>
-          <Dither
-            waveSpeed={0.019}
-            waveFrequency={3.8}
-            waveAmplitude={0.3}
-            waveColor={[0.44, 0.53, 0.53]}
-            colorNum={6}
-            pixelSize={4}
-            disableAnimation={false}
-            enableMouseInteraction={false}
-            mouseRadius={0.5}
-          />
-        </div>
+        {/* Global conditionally rendered Dither Background */}
+        <GlobalBackground />
         <MainLayout>{children}</MainLayout>
       </body>
     </html>

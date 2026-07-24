@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "name": "Swarit Agarwal",
+    "role": "Lead Developer",
+    "image": "/sdgteam/pics/swarit.jpeg",
+    "bio": "Full-stack wizard specializing in scalable architectures and open-source ecosystems.",
+    "github": "https://github.com/swarit",
+    "linkedin": "https://linkedin.com/in/swarit"
+  },
+  {
+    "id": 2,
+    "name": "Yashashwi Singh",
+    "role": "Frontend Engineer",
+    "image": "/sdgteam/pics/yashashwi.jpeg",
+    "bio": "Crafts pixel-perfect UIs with a passion for motion and micro-interactions.",
+    "github": "https://github.com/yashashwi",
+    "linkedin": "https://linkedin.com/in/yashashwi"
+  },
+  {
+    "id": 3,
+    "name": "Suryansh Garg",
+    "role": "Backend Engineer",
+    "image": "/sdgteam/pics/suryansh.png",
+    "bio": "Systems thinker who turns complex infrastructure problems into elegant solutions.",
+    "github": "https://github.com/suryansh",
+    "linkedin": "https://linkedin.com/in/suryansh"
+  },
+  {
+    "id": 4,
+    "name": "Sagnik Mandal",
+    "role": "DevOps Engineer",
+    "image": "/sdgteam/pics/sagnik.jpg",
+    "bio": "Keeps the pipelines green and deployments blazing fast, every time.",
+    "github": "https://github.com/sagnik",
+    "linkedin": "https://linkedin.com/in/sagnik"
+  },
+  {
+    "id": 5,
+    "name": "Pratham Gupta",
+    "role": "ML Engineer",
+    "image": "/sdgteam/pics/pratham.jpeg",
+    "bio": "Bridges the gap between research and production with a keen eye on data.",
+    "github": "https://github.com/pratham",
+    "linkedin": "https://linkedin.com/in/pratham"
+  },
+  {
+    "id": 6,
+    "name": "Sakshi Sharma",
+    "role": "UI/UX Designer",
+    "image": "/sdgteam/pics/sakshi.jpeg",
+    "bio": "Designs with empathy, prototypes with speed, and ships with confidence.",
+    "github": "https://github.com/sakshi",
+    "linkedin": "https://linkedin.com/in/sakshi"
+  },
+  {
+    "id": 7,
+    "name": "Vidit Jain",
+    "role": "Security Researcher",
+    "image": "/sdgteam/pics/vidit.jpeg",
+    "bio": "Finds the edge cases before they find users. CTF champion and open-source contributor.",
+    "github": "https://github.com/vidit",
+    "linkedin": "https://linkedin.com/in/vidit"
+  },
+  {
+    "id": 8,
+    "name": "Yug Agarwal",
+    "role": "Mobile Developer",
+    "image": "/sdgteam/pics/yug.jpeg",
+    "bio": "Builds smooth cross-platform apps that feel native on every device.",
+    "github": "https://github.com/yug",
+    "linkedin": "https://linkedin.com/in/yug"
+  },
+  {
+    "id": 9,
+    "name": "Aayush Awasthi",
+    "role": "Mobile Developer",
+    "image": "/sdgteam/pics/aayush.jpeg",
+    "bio": "Builds smooth cross-platform apps that feel native on every device.",
+    "github": "https://github.com/aayush",
+    "linkedin": "https://linkedin.com/in/ayush"
+  }
+]
