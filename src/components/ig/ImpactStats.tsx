@@ -1,13 +1,47 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useState, useEffect, useRef } from 'react';
+import { motion, useInView, animate } from 'framer-motion';
 import { FileText, Cpu, Users, HardDrive } from 'lucide-react';
+
+interface AnimatedCounterProps {
+  target: number;
+  suffix?: string;
+}
+
+function AnimatedCounter({ target, suffix = '' }: AnimatedCounterProps) {
+  const [count, setCount] = useState(0);
+  const ref = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(ref, { once: true, margin: '-40px' });
+
+  useEffect(() => {
+    if (!isInView) return;
+
+    const controls = animate(0, target, {
+      duration: 2.2,
+      ease: [0.16, 1, 0.3, 1], // Smooth out cubic easing
+      onUpdate(value) {
+        setCount(Math.floor(value));
+      },
+    });
+
+    return () => controls.stop();
+  }, [isInView, target]);
+
+  return (
+    <span ref={ref} className="tabular-nums">
+      {count}
+      {suffix}
+    </span>
+  );
+}
 
 export default function ImpactStats() {
   const stats = [
     {
       label: 'Research Publications',
-      value: '15+',
+      numericValue: 15,
+      suffix: '+',
       description: 'Accepted at top AI conferences & workshops.',
       icon: FileText,
       color: 'text-purple-400',
@@ -15,7 +49,8 @@ export default function ImpactStats() {
     },
     {
       label: 'Open Models & Datasets',
-      value: '24+',
+      numericValue: 24,
+      suffix: '+',
       description: 'Publicly hosted on Hugging Face & GitHub.',
       icon: Cpu,
       color: 'text-cyan-400',
@@ -23,7 +58,8 @@ export default function ImpactStats() {
     },
     {
       label: 'Active Researchers',
-      value: '60+',
+      numericValue: 60,
+      suffix: '+',
       description: 'Students working on machine learning projects.',
       icon: Users,
       color: 'text-pink-400',
@@ -31,7 +67,8 @@ export default function ImpactStats() {
     },
     {
       label: 'GPU Compute Hours',
-      value: '10K+',
+      numericValue: 10,
+      suffix: 'K+',
       description: 'Accelerated neural network training cycles.',
       icon: HardDrive,
       color: 'text-emerald-400',
@@ -56,7 +93,7 @@ export default function ImpactStats() {
             >
               <div className="flex items-center justify-between mb-4">
                 <span className="text-4xl font-extrabold font-orbitron text-white group-hover:text-purple-300 transition-colors drop-shadow-[0_0_15px_rgba(168,85,247,0.4)]">
-                  {stat.value}
+                  <AnimatedCounter target={stat.numericValue} suffix={stat.suffix} />
                 </span>
                 <div className={`p-3.5 rounded-xl bg-white/5 border border-white/10 group-hover:rotate-12 transition-transform ${stat.color}`}>
                   <Icon className="w-6 h-6" />
