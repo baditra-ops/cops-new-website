@@ -51,7 +51,7 @@ export default function SdgFooter() {
             </h3>
             <div className="flex flex-col space-y-3 text-center md:text-left">
               <p>Email: <br className="md:hidden"/><a href={`mailto:${contactInfo.email}`} className="text-phosphor-green hover:text-crt-white transition-colors ml-1">{contactInfo.email}</a></p>
-              <p className="flex flex-col md:flex-row"><span className="mr-1">Address:</span> <span className="opacity-80">{contactInfo.address}</span></p>
+              <p className="flex flex-col md:flex-row"><span className="mr-1">Address:</span> <span className="opacity-80">{contactInfo.add}</span></p>
             </div>
           </div>
           

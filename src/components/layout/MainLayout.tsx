@@ -10,9 +10,9 @@ export default function MainLayout({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
-  const isSdgVertical = pathname?.startsWith('/verticals/sdg');
+  const isCustomVertical = pathname?.startsWith('/verticals/sdg') || pathname?.startsWith('/verticals/ig');
 
-  if (isSdgVertical) {
+  if (isCustomVertical) {
     return <>{children}</>;
   }
 

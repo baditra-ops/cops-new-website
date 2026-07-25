@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "name": "Swarit Agarwal",
+    "role": "IG Lead & AI Systems Architect",
+    "image": "/sdgteam/pics/swarit.jpeg",
+    "bio": "Full-stack wizard specializing in scalable AI architectures, Large Language Models, and open-source ecosystems.",
+    "github": "https://github.com/swarit",
+    "linkedin": "https://linkedin.com/in/swarit"
+  },
+  {
+    "id": 2,
+    "name": "Yashashwi Singh",
+    "role": "AI UI/UX & Frontend Engineer",
+    "image": "/sdgteam/pics/yashashwi.jpeg",
+    "bio": "Crafts pixel-perfect UIs with a passion for motion, micro-interactions, and AI dashboard experiences.",
+    "github": "https://github.com/yashashwi",
+    "linkedin": "https://linkedin.com/in/yashashwi"
+  },
+  {
+    "id": 3,
+    "name": "Suryansh Garg",
+    "role": "Deep Learning Infrastructure Engineer",
+    "image": "/sdgteam/pics/suryansh.png",
+    "bio": "Systems thinker who turns complex GPU training pipelines and distributed infrastructure into elegant solutions.",
+    "github": "https://github.com/suryansh",
+    "linkedin": "https://linkedin.com/in/suryansh"
+  },
+  {
+    "id": 4,
+    "name": "Sagnik Mandal",
+    "role": "MLOps & Model Deployment Engineer",
+    "image": "/sdgteam/pics/sagnik.jpg",
+    "bio": "Keeps the model evaluation pipelines green and high-throughput inference deployments blazing fast.",
+    "github": "https://github.com/sagnik",
+    "linkedin": "https://linkedin.com/in/sagnik"
+  },
+  {
+    "id": 5,
+    "name": "Pratham Gupta",
+    "role": "Core Machine Learning Engineer",
+    "image": "/sdgteam/pics/pratham.jpeg",
+    "bio": "Bridges the gap between deep learning research and production models with a keen eye on data quality.",
+    "github": "https://github.com/pratham",
+    "linkedin": "https://linkedin.com/in/pratham"
+  },
+  {
+    "id": 6,
+    "name": "Sakshi Sharma",
+    "role": "Generative AI & Creative Tech Designer",
+    "image": "/sdgteam/pics/sakshi.jpeg",
+    "bio": "Designs generative AI workflows with empathy, prototypes with speed, and ships intelligent interfaces.",
+    "github": "https://github.com/sakshi",
+    "linkedin": "https://linkedin.com/in/sakshi"
+  },
+  {
+    "id": 7,
+    "name": "Vidit Jain",
+    "role": "AI Security & Red-Teaming Researcher",
+    "image": "/sdgteam/pics/vidit.jpeg",
+    "bio": "Explores LLM jailbreaking, adversarial robustness, and model alignment. CTF champion and security contributor.",
+    "github": "https://github.com/vidit",
+    "linkedin": "https://linkedin.com/in/vidit"
+  },
+  {
+    "id": 8,
+    "name": "Yug Agarwal",
+    "role": "On-Device ML & Mobile AI Engineer",
+    "image": "/sdgteam/pics/yug.jpeg",
+    "bio": "Builds smooth cross-platform mobile apps with quantized on-device neural network models.",
+    "github": "https://github.com/yug",
+    "linkedin": "https://linkedin.com/in/yug"
+  },
+  {
+    "id": 9,
+    "name": "Aayush Awasthi",
+    "role": "Edge AI & Mobile Developer",
+    "image": "/sdgteam/pics/aayush.jpeg",
+    "bio": "Engineers lightweight mobile AI agents and high-performance cross-platform mobile user interfaces.",
+    "github": "https://github.com/aayush",
+    "linkedin": "https://linkedin.com/in/ayush"
+  }
+]

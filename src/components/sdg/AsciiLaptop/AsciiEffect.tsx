@@ -41,7 +41,7 @@ export default function AsciiEffect({ children }: { children: React.ReactNode })
   }, 1); // High priority to hijack render loop
 
   const uniforms = useMemo(() => ({
-     tDiffuse: { value: null },
+     tDiffuse: { value: null as THREE.Texture | null },
      tAtlas: { value: createAtlas() },
      uResolution: { value: new THREE.Vector2(size.width, size.height) },
      uTime: { value: 0 },

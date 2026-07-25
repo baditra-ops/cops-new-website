@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "projectname": "COPS Neural Engine",
+    "description": "An open-source lightweight framework for distributed fine-tuning and retrieval-augmented generation (RAG) optimized for local GPU clusters.",
+    "developer": "Aarav Sharma & Vikram Sethi",
+    "githublink": "https://github.com/cops-ig/neural-engine",
+    "deployedlink": "https://ig.copsiitbhu.co.in/neural-engine",
+    "status": "OK",
+    "featured": true,
+    "image": "/igprojectsdata/pics/neural-engine.png",
+    "stack": ["PyTorch", "Transformers", "CUDA", "FastAPI"]
+  },
+  {
+    "id": 2,
+    "projectname": "Vision-X Transformer",
+    "description": "Real-time semantic segmentation and depth estimation model designed for autonomous edge robotics and drone telemetry.",
+    "developer": "Ananya Verma",
+    "githublink": "https://github.com/cops-ig/vision-x",
+    "deployedlink": "https://ig.copsiitbhu.co.in/vision-x",
+    "status": "IN_PROGRESS",
+    "featured": true,
+    "image": "/igprojectsdata/pics/vision-x.png",
+    "stack": ["PyTorch", "OpenCV", "TensorRT", "ONNX"]
+  },
+  {
+    "id": 3,
+    "projectname": "SimuRL Arena",
+    "description": "Multi-agent reinforcement learning environment benchmark for autonomous strategy games and algorithmic decision making.",
+    "developer": "Rohan Kulkarni",
+    "githublink": "https://github.com/cops-ig/simu-rl",
+    "deployedlink": "",
+    "status": "OK",
+    "featured": true,
+    "image": "/igprojectsdata/pics/simu-rl.png",
+    "stack": ["Python", "Ray RLlib", "Gymnasium", "WebGPU"]
+  },
+  {
+    "id": 4,
+    "projectname": "LatentCraft GenAI",
+    "description": "Custom latent diffusion pipeline for generating domain-specific architectural CAD assets and 3D mesh representations.",
+    "developer": "Diya Nair",
+    "githublink": "https://github.com/cops-ig/latent-craft",
+    "deployedlink": "https://ig.copsiitbhu.co.in/latent-craft",
+    "status": "IN_PROGRESS",
+    "featured": true,
+    "image": "/igprojectsdata/pics/latent-craft.png",
+    "stack": ["Diffusers", "Three.js", "Python", "React"]
+  }
+]
