@@ -11,8 +11,21 @@ const STATUS_STYLES: Record<string, { label: string; color: string; glow: string
   PLANNED:     { label: 'PLANNED',     color: 'text-crt-white/40 border-crt-white/30',    glow: '' },
 };
 
+interface SdgProject {
+  id: number;
+  projectname: string;
+  description: string;
+  developer: string;
+  githublink: string;
+  deployedlink: string;
+  status: string;
+  featured?: boolean;
+  image?: string;
+  stack: string[];
+}
+
 export default function TopProjects() {
-  const featured = (projectsData as any[])
+  const featured = (projectsData as SdgProject[])
     .filter((p) => p.featured)
     .slice(0, 4);
 
@@ -60,7 +73,7 @@ export default function TopProjects() {
                 {/* 16:9 Image */}
                 <div className="relative w-full aspect-video overflow-hidden bg-black/40">
                   <Image
-                    src={project.image}
+                    src={project.image || ''}
                     alt={project.projectname}
                     fill
                     className="object-cover opacity-70 group-hover:opacity-90 transition-opacity scale-100 group-hover:scale-105 duration-500"

@@ -46,7 +46,7 @@ export default function AsciiEffect({ children }: { children: React.ReactNode })
      uResolution: { value: new THREE.Vector2(size.width, size.height) },
      uTime: { value: 0 },
      uMouse: { value: new THREE.Vector2(2.0, 2.0) }, // Default off-screen
-  }), []);
+  }), [size.width, size.height]);
 
   const smoothMouse = useRef(new THREE.Vector2(2.0, 2.0));
   const startTime = useRef(0);

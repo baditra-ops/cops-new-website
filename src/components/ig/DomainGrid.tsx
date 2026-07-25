@@ -1,5 +1,6 @@
 'use client';
 
+import { ComponentType } from 'react';
 import { motion } from 'framer-motion';
 import { Bot, Eye, Gamepad2, Layers, Cpu, Code2 } from 'lucide-react';
 
@@ -7,7 +8,7 @@ interface Domain {
   title: string;
   subtitle: string;
   description: string;
-  icon: any;
+  icon: ComponentType<{ className?: string }>;
   color: string;
   borderGlow: string;
   tags: string[];

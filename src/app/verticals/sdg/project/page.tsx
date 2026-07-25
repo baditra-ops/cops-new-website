@@ -1,14 +1,26 @@
 'use client';
 
 import React, { useRef, useState, useEffect } from "react";
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { motion, useScroll, useTransform, AnimatePresence, MotionValue } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import projectsData from "../../../../../public/sdgprojectsdata/sdgprojectsdata.json";
 import StatusBadge from "../../../../components/sdg/StatusBadge";
 
+interface ProjectItem {
+  id: number;
+  projectname: string;
+  description: string;
+  developer: string;
+  githublink: string;
+  deployedlink: string;
+  status: "offline" | "OK" | "IN_PROGRESS" | "PLANNED" | "active" | "pending" | "ok" | "in_progress" | "planned" | string;
+  featured: boolean;
+  image: string;
+  stack: string[];
+}
+
 // --- Scroll Animation: Parallax Scrolling Terminal Code Background ---
-const ParallaxBackground = ({ scrollYProgress }: { scrollYProgress: any }) => {
+const ParallaxBackground = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> }) => {
   const y1 = useTransform(scrollYProgress, [0, 1], [0, -180]);
   const y2 = useTransform(scrollYProgress, [0, 1], [0, -320]);
   const y3 = useTransform(scrollYProgress, [0, 1], [0, -100]);
@@ -33,7 +45,7 @@ const ParallaxBackground = ({ scrollYProgress }: { scrollYProgress: any }) => {
 };
 
 // --- Scroll Animation: CLI HUD Progress Bar ---
-const ScrollProgressHUD = ({ scrollYProgress }: { scrollYProgress: any }) => {
+const ScrollProgressHUD = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> }) => {
   const percent = useTransform(scrollYProgress, [0, 1], [0, 100]);
   const [roundedPercent, setRoundedPercent] = useState(0);
 
@@ -97,7 +109,7 @@ const VerboseText = ({ text, delay, trigger }: { text: string; delay: number; tr
 };
 
 // --- Project Row (ps aux aesthetic) ---
-const ProjectRow = ({ project }: { project: any }) => {
+const ProjectRow = ({ project }: { project: ProjectItem }) => {
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -112,7 +124,7 @@ const ProjectRow = ({ project }: { project: any }) => {
        <div onClick={() => setExpanded(!expanded)} className="p-4 flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-4 cursor-pointer relative z-10">
          <div className="w-full lg:w-32 shrink-0 flex items-center justify-between lg:justify-start">
            <span className="lg:hidden text-xs text-phosphor-green/50">STATUS:</span>
-           <StatusBadge status={project.status as any} />
+           <StatusBadge status={project.status as Parameters<typeof StatusBadge>[0]['status']} />
          </div>
          <div className="w-full lg:w-40 shrink-0 text-phosphor-green/70 uppercase truncate font-jetbrains text-sm flex gap-2">
            <span className="lg:hidden text-xs text-phosphor-green/50">DEV:</span> {project.developer}

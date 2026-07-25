@@ -28,27 +28,28 @@ async function getResources(): Promise<Resource[]> {
       title = titleMatch[1].replace(/<[^>]+>/g, '').trim();
     }
     
-    // Determine category from filename
+    // Categorize into NLP, CV, RL or RESEARCH based on filename
     let type = 'NLP';
-    if (file.includes('vision') || file.includes('cv')) {
+    const lowerFile = file.toLowerCase();
+    if (lowerFile.includes('vision') || lowerFile.includes('cv')) {
       type = 'CV';
-    } else if (file.includes('reinforcement') || file.includes('rl')) {
+    } else if (lowerFile.includes('reinforcement') || lowerFile.includes('rl')) {
       type = 'RL';
-    } else if (file.includes('llm') || file.includes('rag') || file.includes('nlp')) {
+    } else if (lowerFile.includes('llm') || lowerFile.includes('rag') || lowerFile.includes('nlp')) {
       type = 'NLP';
     } else {
       type = 'RESEARCH';
     }
 
-    // Estimate read time (words / 200)
-    const words = content.split(/\s+/).length;
+    // Estimate reading time & word count
+    const words = content.split(/\s+/).filter(Boolean).length;
     const readTimeMinutes = Math.max(1, Math.ceil(words / 200));
 
     return {
       id: file,
       title,
       type,
-      tags: [type.toLowerCase(), 'ai-research', 'cops-ig'],
+      tags: [type.toLowerCase(), lowerFile.replace('.md', ''), 'ai-research'],
       content,
       author: 'COPS IG AI',
       readTime: `${readTimeMinutes} min read`,
@@ -56,7 +57,6 @@ async function getResources(): Promise<Resource[]> {
     };
   });
 
-  // Sort resources so NLP, CV, RL appear prominently
   return resources;
 }
 
@@ -74,7 +74,7 @@ export default async function IGResourcesPage() {
           AI Knowledge Base & Specs
         </h1>
         <p className="font-mono text-gray-400 text-sm sm:text-base max-w-3xl">
-          // EXPLORE RESEARCH PAPERS, BLUEPRINTS & TECHNICAL GUIDES ACROSS NLP, COMPUTER VISION & REINFORCEMENT LEARNING
+          {'// EXPLORE RESEARCH PAPERS, BLUEPRINTS & TECHNICAL GUIDES ACROSS NLP, COMPUTER VISION & REINFORCEMENT LEARNING'}
         </p>
       </header>
 

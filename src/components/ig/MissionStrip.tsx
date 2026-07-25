@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Sparkles, Brain, Cpu, ShieldCheck } from 'lucide-react';
 
 export default function MissionStrip() {

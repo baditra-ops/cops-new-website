@@ -22,10 +22,9 @@ export default function AsciiRenderer({
   columns = 100,
   color = '#33ff66',
   glowColor = 'rgba(51, 255, 102, 0.6)',
-  fontSize = 10,
   bootAnimation = true,
 }: AsciiRendererProps) {
-  const { gl, scene, camera, size } = useThree();
+  const { gl, scene, camera } = useThree();
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const ctxRef = useRef<CanvasRenderingContext2D | null>(null);
   const startTimeRef = useRef(0);

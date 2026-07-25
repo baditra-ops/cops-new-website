@@ -53,7 +53,7 @@ export default function IgNavbar() {
               </div>
               <div className="flex flex-col">
                 <span className="font-orbitron font-bold text-lg text-white tracking-wider group-hover:text-purple-300 transition-colors">
-                  IG <span className="text-xs text-purple-400 font-mono font-normal">// AI</span>
+                  IG <span className="text-xs text-purple-400 font-mono font-normal">{'// AI'}</span>
                 </span>
                 <span className="text-[10px] font-mono text-purple-300/60 tracking-widest hidden sm:inline">
                   INTELLIGENCE GROUP

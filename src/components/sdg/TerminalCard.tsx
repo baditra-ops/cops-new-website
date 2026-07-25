@@ -7,7 +7,7 @@ interface TerminalCardProps {
   delay?: number;
 }
 
-export default function TerminalCard({ title, description, icon, delay = 0 }: TerminalCardProps) {
+export default function TerminalCard({ title, description, icon }: TerminalCardProps) {
   return (
     <div 
       className="relative p-6 border border-phosphor-green/40 bg-[#03110a] hover:bg-phosphor-green/10 hover:border-phosphor-green transition-all duration-300 group shadow-[0_0_15px_rgba(51,255,102,0.05)] hover:shadow-[0_0_20px_rgba(51,255,102,0.2)] flex flex-col h-full"

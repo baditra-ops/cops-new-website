@@ -66,12 +66,12 @@ export default function NeuralCore() {
       for (let i = 0; i < nodes.length; i++) {
         const node = nodes[i];
 
-        let x1 = node.x * cosA - node.z * sinA;
-        let z1 = node.z * cosA + node.x * sinA;
+        const x1 = node.x * cosA - node.z * sinA;
+        const z1 = node.z * cosA + node.x * sinA;
 
         const tilt = 0.35 + mouseOffset.current.y;
-        let y1 = node.y * Math.cos(tilt) - z1 * Math.sin(tilt);
-        let z2 = z1 * Math.cos(tilt) + node.y * Math.sin(tilt);
+        const y1 = node.y * Math.cos(tilt) - z1 * Math.sin(tilt);
+        const z2 = z1 * Math.cos(tilt) + node.y * Math.sin(tilt);
 
         const perspective = 420;
         const scale = perspective / (perspective + z2);

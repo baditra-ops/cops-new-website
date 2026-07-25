@@ -4,7 +4,7 @@ import { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
-import { BookOpen, FileText, Search, ChevronRight, Clock, Copy, Check, Sparkles, User, Layers } from 'lucide-react';
+import { BookOpen, FileText, Search, ChevronRight, Clock, Copy, Check, User, Layers } from 'lucide-react';
 
 export interface Resource {
   id: string;
@@ -282,7 +282,7 @@ export default function ResourcesClient({ initialResources }: ResourcesClientPro
                         {children}
                       </ol>
                     ),
-                    code: ({ node, className, children, ...props }) => {
+                    code: ({ className, children, ...props }) => {
                       const isInline = !className;
                       if (isInline) {
                         return (

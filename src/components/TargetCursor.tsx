@@ -326,6 +326,8 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
     };
     window.addEventListener('resize', resizeHandler);
 
+    const strengthObj = activeStrengthRef.current;
+
     return () => {
       if (tickerFnRef.current) {
         gsap.ticker.remove(tickerFnRef.current);
@@ -343,7 +345,7 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
       document.body.style.cursor = originalCursor;
       isActiveRef.current = false;
       targetCornerPositionsRef.current = null;
-      activeStrengthRef.current.current = 0;
+      strengthObj.current = 0;
     };
   }, [
     targetSelector,

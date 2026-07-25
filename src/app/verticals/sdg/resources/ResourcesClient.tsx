@@ -60,7 +60,7 @@ export default function ResourcesClient({ initialResources }: { initialResources
           <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-phosphor-green opacity-50 group-focus-within:opacity-100" />
           <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-phosphor-green opacity-50 group-focus-within:opacity-100" />
 
-          <span className="text-phosphor-green/50 mr-2 select-none shrink-0">&gt; grep resources --query="</span>
+          <span className="text-phosphor-green/50 mr-2 select-none shrink-0">&gt; grep resources --query=&quot;</span>
           <input 
             type="text" 
             value={query}
@@ -69,7 +69,7 @@ export default function ResourcesClient({ initialResources }: { initialResources
             placeholder="..."
             spellCheck="false"
           />
-          <span className="text-phosphor-green/50 ml-1 select-none shrink-0">"</span>
+          <span className="text-phosphor-green/50 ml-1 select-none shrink-0">&#34;</span>
           <span className="animate-pulse text-phosphor-green select-none ml-2 shrink-0">█</span>
         </div>
 

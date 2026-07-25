@@ -101,7 +101,7 @@ export default function AsciiLaptop({
   const [mounted, setMounted] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
-  const [spot, setSpot] = useState({ x: 50, y: 30 });
+  const [, setSpot] = useState({ x: 50, y: 30 });
   const [keyboard, setKeyboard] = useState<Cell[][]>(placeholderKeyboard);
   const [border, setBorder] = useState<Cell[]>(placeholderBorder);
   const [sparks, setSparks] = useState<string[]>(placeholderSparks);

@@ -81,7 +81,8 @@ export default function AchievementsTimeline() {
       }
     );
 
-    yearRefs.current.forEach((ref, index) => {
+    const currentRefs = yearRefs.current;
+    currentRefs.forEach((ref, index) => {
       if (ref) {
         ref.setAttribute('data-year', groupedAchievements[index].year);
         observer.observe(ref);
@@ -89,7 +90,7 @@ export default function AchievementsTimeline() {
     });
 
     return () => {
-      yearRefs.current.forEach((ref) => {
+      currentRefs.forEach((ref) => {
         if (ref) observer.unobserve(ref);
       });
     };

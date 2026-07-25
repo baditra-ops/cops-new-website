@@ -1,7 +1,6 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import { useEffect, useRef, useState } from 'react';
 import CrtOverlay from './CrtOverlay';
 
 // Lazy-load the FaultyTerminal client-side only for performance
